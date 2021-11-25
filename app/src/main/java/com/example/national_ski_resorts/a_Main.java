@@ -225,7 +225,7 @@ public class a_Main extends AppCompatActivity implements OnMapReadyCallback {//,
         });
     }
 
-
+        //깃업뎃
     //구글맵 준비
     @Override
     public void onMapReady(GoogleMap googleMap) {
