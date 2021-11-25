@@ -1,0 +1,90 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">National_Ski_Resorts</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="myAppName">전국 스키장</string>
+    <string name="Location">지역별 스키장</string>
+    <string name="Filter">맞춤 스키장 찾기</string>
+    <string name="nav_header_desc">지역별 스키장</string>
+    <string name="nav_header_title">이정민</string>
+    <string name="nav_header_subtitle">reach8684@gmail.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="star">스타힐리조트</string>
+    <string name="star_address">
+        경기도 남양주시 화도읍 먹갓로 96
+    </string>
+
+    <string name="bears">베어스타운</string>
+    <string name="bears_address">
+        경기도 포천시 내촌면 소학리 305
+    </string>
+
+    <string name="gon">곤지암리조트</string>
+    <string name="gon_address">
+        경기도 광주시 도척면 도척윗로 278
+    </string>
+
+    <string name="pine">양지파인리조트</string>
+    <string name="pine_address">
+        경기도 용인시 처인구 양지면 남곡리 34-1
+    </string>
+
+    <string name="ji">지산리조트</string>
+    <string name="ji_address">
+        경기도 이천시 마장면 해월리 357-3
+    </string>
+
+    <string name="duck">덕유산리조트</string>
+    <string name="duck_address">
+        전라북도 무주군 설천면 심곡리 산43-15
+    </string>
+
+    <string name="ork">한솔오크밸리</string>
+    <string name="ork_address">
+        강원도 원주시 지정면 판대리 산1-12
+    </string>
+
+    <string name="vi">비발디파크</string>
+    <string name="vi_address">
+        강원도 홍천군 서면 한치골길 262
+    </string>
+
+    <string name="wel">웰리힐리파크</string>
+    <string name="wel_address">
+        강원도 횡성군 둔내면 두원리 204
+    </string>
+
+    <string name="elie">엘리시안리조트</string>
+    <string name="elie_address">
+        강원도 춘천시 남산면 북한강변길 688
+    </string>
+
+    <string name="hwi">휘닉스파크</string>
+    <string name="hwi_address">
+        강원도 평창군 봉평면 면온리 946-14
+    </string>
+
+    <string name="yong">용평리조트</string>
+    <string name="yong_address">
+        강원도 평창군 대관령면 용산리 99-5
+    </string>
+
+    <string name="hi">하이원리조트</string>
+    <string name="hi_address">
+        강원도 정선군 고한읍 고한리
+    </string>
+
+    <string name="al">알펜시아리조트</string>
+    <string name="al_address">
+        강원도 평창군 대관령면 솔봉로 325
+    </string>
+
+    <string name="eden">에덴벨리리조트</string>
+    <string name="eden_address">
+        경상남도 양산시 원동면 어실로 1206
+    </string>
+
+    <string name="permission_1">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+    <string name="permission_2">사진 및 파일을 저장하기 위하여 접근 권한이 필요합니다.</string>
+
+</resources>

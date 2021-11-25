@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#8faadc"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".z_Register">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="회원가입"
+        android:textSize="50sp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_gravity="center_vertical"
+        android:id="@+id/joinEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="  이메일을 입력 해주세요."
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#dae3f3" />
+
+    <EditText
+        android:id="@+id/joinPw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="  비밀번호를 입력 해주세요."
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#dae3f3" />
+
+    <EditText
+        android:id="@+id/joinPwck"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="  비밀번호를 입력 해주세요."
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#dae3f3" />
+
+    <Button
+        android:id="@+id/joinbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#2f5597"
+        android:textColor="#ffffff"
+        android:text="회원가입" />
+
+
+
+
+
+
+</LinearLayout>

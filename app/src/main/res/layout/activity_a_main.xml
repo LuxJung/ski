@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMain"
+        android:orientation="vertical"
+        tools:context=".a_Main">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88b6ed"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/map"
+                tools:context=".MapsActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/all" />
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/colorBox"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <Button
+                    android:id="@+id/bt_loca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#2f5597"
+                    android:text="지역별"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/bt_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="4"
+                    android:background="#2f5597"
+                    android:text="조건 검색"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="1dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="652dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="-7dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="411dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mstarhill_1"
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="남양주"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mstarhill_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mstarhill_2"
+                app:layout_constraintTop_toTopOf="@+id/Mstarhill_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mstarhill_2"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="스타힐리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.158"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mstarhill_3"
+                android:layout_width="143dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mstarhill_2"
+                app:layout_constraintStart_toStartOf="@+id/Mstarhill_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mstarhill_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mbears_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="포천"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mbears_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mbears_2"
+                app:layout_constraintTop_toTopOf="@+id/Mbears_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mbears_2"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="109dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="베어스타운"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mbears_3"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mbears_2"
+                app:layout_constraintStart_toStartOf="@+id/Mbears_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mbears_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mgonjiam_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="광주"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mgonjiam_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mgonjiam_2"
+                app:layout_constraintTop_toTopOf="@+id/Mgonjiam_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mgonjiam_2"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="252dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="곤지암리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.21"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mbears_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mgonjiam_3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mgonjiam_2"
+                app:layout_constraintStart_toStartOf="@+id/Mgonjiam_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mgonjiam_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mpine_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="용인"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mpine_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mpine_2"
+                app:layout_constraintTop_toTopOf="@+id/Mpine_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mpine_2"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="양지파인리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mgonjiam_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mpine_3"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mpine_2"
+                app:layout_constraintStart_toStartOf="@+id/Mpine_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mpine_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mjisan_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="이천"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mjisan_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mjisan_2"
+                app:layout_constraintTop_toTopOf="@+id/Mjisan_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mjisan_2"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="지산리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.105"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mpine_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mjisan_3"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mjisan_2"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="@+id/Mjisan_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mjisan_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mduck_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="무주"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mduck_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mduck_2"
+                app:layout_constraintTop_toTopOf="@+id/Mduck_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mduck_2"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="덕유산리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.191"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Mjisan_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mduck_3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mduck_2"
+                app:layout_constraintStart_toStartOf="@+id/Mduck_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mduck_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Melie_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="강촌"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Melie_2"
+                app:layout_constraintEnd_toStartOf="@+id/Melie_2"
+                app:layout_constraintTop_toTopOf="@+id/Melie_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Melie_2"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="엘리시안리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Melie_3"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Melie_2"
+                app:layout_constraintStart_toStartOf="@+id/Melie_1"
+                app:layout_constraintTop_toBottomOf="@+id/Melie_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mhwinix_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="평창"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mhwinix_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mhwinix_2"
+                app:layout_constraintTop_toTopOf="@+id/Mhwinix_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mhwinix_2"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="휘닉스파크"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mork_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mhwinix_3"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mhwinix_2"
+                app:layout_constraintStart_toStartOf="@+id/Mhwinix_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mhwinix_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Myoungpyung_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="평창"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Myoungpyung_2"
+                app:layout_constraintEnd_toStartOf="@+id/Myoungpyung_2"
+                app:layout_constraintTop_toTopOf="@+id/Myoungpyung_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Myoungpyung_2"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="용평리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mhwinix_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Myoungpyung_3"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Myoungpyung_2"
+                app:layout_constraintStart_toStartOf="@+id/Myoungpyung_1"
+                app:layout_constraintTop_toBottomOf="@+id/Myoungpyung_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Malpensia_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="평창"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Malpensia_2"
+                app:layout_constraintEnd_toStartOf="@+id/Malpensia_2"
+                app:layout_constraintTop_toTopOf="@+id/Malpensia_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Malpensia_2"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="알펜시아리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Myoungpyung_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Malpensia_3"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Malpensia_2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/Malpensia_1"
+                app:layout_constraintTop_toBottomOf="@+id/Malpensia_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mvivaldi_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="홍천"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mvivaldi_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mvivaldi_2"
+                app:layout_constraintTop_toTopOf="@+id/Mvivaldi_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mvivaldi_2"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="비발디파크"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.59"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mork_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mvivaldi_3"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mvivaldi_2"
+                app:layout_constraintStart_toStartOf="@+id/Mvivaldi_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mvivaldi_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mweli_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="횡성"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mweli_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mweli_2"
+                app:layout_constraintTop_toTopOf="@+id/Mweli_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mweli_2"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="웰리힐리파크"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mvivaldi_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mweli_3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mweli_2"
+                app:layout_constraintStart_toStartOf="@+id/Mweli_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mweli_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mhione_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="정선"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mhione_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mhione_2"
+                app:layout_constraintTop_toTopOf="@+id/Mhione_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mhione_2"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="하이원리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.924"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Malpensia_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mhione_3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mhione_2"
+                app:layout_constraintStart_toStartOf="@+id/Mhione_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mhione_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mork_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="원주"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Mork_2"
+                app:layout_constraintEnd_toStartOf="@+id/Mork_2"
+                app:layout_constraintTop_toTopOf="@+id/Mork_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mork_2"
+                android:layout_width="92dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="한솔오크밸리"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.651"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Melie_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Mork_3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Mork_2"
+                app:layout_constraintStart_toStartOf="@+id/Mork_1"
+                app:layout_constraintTop_toBottomOf="@+id/Mork_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Meden_1"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loca"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="양산"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Meden_2"
+                app:layout_constraintEnd_toStartOf="@+id/Meden_2"
+                app:layout_constraintTop_toTopOf="@+id/Meden_2" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Meden_2"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="276dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/resort"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="에덴벨리리조트"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/Mhione_3" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/Meden_3"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/season"
+                android:clickable="true"
+                android:hint="시즌일자"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/Meden_2"
+                app:layout_constraintStart_toStartOf="@+id/Meden_1"
+                app:layout_constraintTop_toBottomOf="@+id/Meden_2" />
+
+            <Switch
+                android:id="@+id/switch_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다른ver"
+                app:layout_constraintBottom_toTopOf="@+id/Melie_2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintTop_toTopOf="@+id/guideline8"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/navi_header"
+        app:menu="@menu/navi_menu"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
